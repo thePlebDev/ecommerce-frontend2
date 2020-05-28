@@ -1,0 +1,19 @@
+THINGS I HAVE TO DO
+1) create the navbar
+1.5) create the fake data
+2)create the home page component
+3) create the home page layout grid mobile first
+4) create the home page layout grid larger screens
+--------------------------------------------------
+1) create the checkout
+2) bask in the first completed project
+3) launch and continue to the Backend
+
+
+SO WHAT EVEN IS THE REACTDOM:
+- the react-dom package provides DOM-specific methods that can be used at top level of your app and as an escape hatch to
+get  outside of the React model id needed
+- we use the render method to render a react element into the DOM in the supplied container
+
+CREATING THE NAVBAR:
+- so basically all this is, is an unordered list in html and then we are going to css the heck out of it 
