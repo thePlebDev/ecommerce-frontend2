@@ -1,12 +1,13 @@
 THINGS I HAVE TO DO
-1) create the navbar
-1.5) create the fake data
-2)create the home page component
-3) create the home page layout grid mobile first
+(DONE)   1) create the navbar
+(DONE) 1.4) hook up React Router
+(DONE) 1.5) create the fake data
+(DONE)   2)create the home page component
+(DONE)   3) create the home page layout grid mobile first
 4) create the home page layout grid larger screens
 --------------------------------------------------
-1) create the checkout
-2) bask in the first completed project
+1) create the individual page
+2) create checkout
 3) launch and continue to the Backend
 
 
@@ -16,4 +17,93 @@ get  outside of the React model id needed
 - we use the render method to render a react element into the DOM in the supplied container
 
 CREATING THE NAVBAR:
-- so basically all this is, is an unordered list in html and then we are going to css the heck out of it 
+- so basically all this is, is an unordered list in html and then we are going to css the heck out of it
+- when we use the space-between things we are pushing everything except the middle one to the middle.
+- justify content aligns things along the main horizontal axis and align items does so on the vertical line
+- so the navbar is actually starting to come along quite nice, I just need to do some conditional rendering for the
+counter number and then we will be good to go.
+- I completed the React conditional rendering with a
+
+css transition:
+- provide a way to control animation speed when changing css properties. we want this becasue we want a way to chnage the
+text size when the number changes
+- css transitions let us decide which properties to animate by listing them explicitly, how long the transition will last
+and hwo it will run
+
+transition-property: specifies the name or names of the CSS properties to which transitions should be applied. Only
+properties listed here are animated during transitions; changes to all other properties occur instantaneously as usual
+
+transition-duration: specifies the duration over which transitions should occur. You  can specify a single duration
+that apllies to all properties during the transition
+
+- so the transition properties are when we specify explicitly which properties are to be animated and the duration is
+just that
+
+-so it goes something like this:
+  transition: <property><duration> <timing-function> <delay>
+- it looks like I put the transition information on the base class and when a state changes we specify what we want the
+new element to look like. I think we are going to have to specify a state change with.
+- what we want to happen is that when a button is clicked we want the number on the chart link to change. it should grow
+and then shirnk back to normal.
+- so I think I am going to accomplish this by adding a class and then removing it quickly, we will see if that works.
+
+- so I will have a button that changes the count value
+
+- but I think I will have to find out how to use Refs and the DOM
+
+REFS AND THE DOM:
+-you should use Refs in these three cases
+1) Managing focus, text selection, or media playback
+2) triggering imperative animations
+3) integrating with third-party DOM libraries
+
+- but we really shouldn't use refs. lets look at the onChagne function
+- we can use conditional rendering to change the class name
+- so if we use a toggle state of on and off, we can say if the toggel is on add this class and then remove it
+
+REACT ROUTER:
+- so we are going to need to wrap our app component in the browser router element, put everything we wan to render inside
+a switch statment which has <route/> components and then we are going to use the links to make things happen.
+
+
+CREATING THE CARD COMPONENT:
+-the images is going to be the hardest part for me. I have no Idea why but images always scared me
+- image size can be controlled by the height and width, just like any other box
+
+- now I am going to learn about flexbox
+- apparlently there are properties for the container and the child
+- so we will use the flex direction to make things appear in row
+- I should actually be reading about mobile first design
+
+MODILE FIRST
+- this is literaly a kind of design that says we should design for phones first and then move our way up to larger
+screens
+- so mobile first is content first, it forces us to use the
+
+
+CART BUTTON:
+- when I try to update the cart counter I am either getting a undefined error or a can't set this value because it
+only has a getter, so I guess that means that I am going to create my own data structure. I think I am going to use a
+factory function for it, because that way I can create privacy
+
+- in JavaScript, any function can return a new object. When its not a constructor function or class, its called a factory
+function
+- so it it doesnt start with the class keyword of start with the new operator then it is a factory function
+
+
+CREATING THE CART OBJECT:
+- all Object properties in JavaScript are publiv and there's no explicit way to indicate that a property shouldn't be
+accessed from a particual object.
+
+module pattern:
+-it is an object-creation pattern designed to create singleton objects with private data. singleton ton just meaning use
+once. the basic approach is to is to use an immediately invoked function expression that returns an object
+- so I think that is going to happen.
+
+- this is hwat I want to happen:
+
+- when button gets clicked it will call the function and use setData with the function that was given from the cart object.
+that will then updat that state
+- we want the NavBar and then card to have access to the same props as the card comonents. i think this would require a HOC
+- so we want them to subscribe to the data source.
+HOC:

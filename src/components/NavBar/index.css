@@ -1,3 +1,53 @@
-h1{
-  color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding:0;
+
+}
+
+li,a{
+  font-family: "Montserrat", sans-serif;
+  font-weight:500;
+  font-size: 32px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+.navbar-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:30px 10%;
+  background-color: #24252A
+}
+
+.nav__links{
+  list-style: none;
+}
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+  border: 1px solid #0088a9;
+  border-radius: 5px;
+  padding:10px;
+  position: relative;
+
+}
+
+.nav__links li a:hover{
+  color: #0088a9
+}
+.cart-counter{
+  position: absolute;
+  top: 0;
+  right: 3px;
+  font-size: 20px;
+  color: #0088a9;
+
 }
