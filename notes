@@ -107,3 +107,29 @@ that will then updat that state
 - we want the NavBar and then card to have access to the same props as the card comonents. i think this would require a HOC
 - so we want them to subscribe to the data source.
 HOC:
+- so we want to create a function that creates a component that has gives access to the makeshift database  by passing
+it down to the component it returns
+- this function will accept as one of its arguments a child component that recieves the subscribed data
+data as a prop
+- so we want one argument to be a component and the other one to be the data source
+- so it is going to literally going to be a function that returns a component
+- re mounting a component causes the state of that component and all of its children to be lost
+
+- so I hear the word composition alot. like composition over inheritance. I want to find out what that means
+- so what is composition
+- it seems to be another way to program, instead of classical inheritance
+
+Inheritance: is when a class is based on another using the same implementation. so just the classic class
+and subclass stuff. inheritance is when you design the classes around what they are
+
+Composition: is about taking simple objects and combinding them to build more complex ones. so Composition
+seems like when you create a bunch of functions and piece them together to make a complex object
+- composition is when we design objects around what they do
+
+ARROW FUNCTIONS:
+- so its just an alternative to a function expression. a fucntion expression is just a normal function. So
+that means that when we can simply return a nameless arrow function.
+
+
+- spread syntax lets us expand an iterable in place
+- the rest parameter syntax allows us to represent an indefinite number of argumnets as an array.
